@@ -234,22 +234,3 @@ tool calls, synthesis, claim verification, formatting), not just the LLM call.
 |---|---|---|
 | `GOOGLE_API_KEY` | Yes | aistudio.google.com/apikey |
 | `TAVILY_API_KEY` | Optional (better web search; falls back to DuckDuckGo) | tavily.com |
-
----
-
-## Interview Talking Points
-
-- **Why Chroma over a hosted vector DB?** Runs embedded/local — zero infra to stand up, which
-  matters for a "no Docker, deployable on free tiers" constraint, while still being a real
-  production-grade vector store (used in real companies' RAG stacks).
-- **Why SQLite over Postgres?** Same reasoning — one file, zero server process, still fully
-  relational and ACID; trivial to swap for Postgres later by changing `sqlite_db.py`'s
-  connection logic if the project needed multi-instance deployment.
-- **Why judge citations with a second LLM call instead of trusting the synthesizer?** Separation
-  of concerns: the model that *wrote* a claim is exactly the model most likely to rationalize
-  it as supported. A second, independently-prompted call that only sees the claim + raw source
-  text (not the original question or the rest of the answer) is a stricter, more honest check.
-- **Why exclude failed runs from averages instead of counting them as 0%?** A 0% would silently
-  conflate "the agent gave a bad answer" with "the API call errored out" — two very different
-  failure modes that need different fixes. Keeping them separate (and surfacing `failed_runs`
-  as its own number) is more honest and more actionable.
