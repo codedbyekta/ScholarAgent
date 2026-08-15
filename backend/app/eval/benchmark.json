@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1",
+    "query": "What is the Transformer architecture and how does self-attention work?",
+    "category": "foundational",
+    "expected_sources": ["Attention Is All You Need"]
+  },
+  {
+    "id": "q2",
+    "query": "What is Retrieval-Augmented Generation (RAG) and why does it reduce hallucination?",
+    "category": "foundational",
+    "expected_sources": ["Retrieval-Augmented Generation"]
+  },
+  {
+    "id": "q3",
+    "query": "What is LoRA (Low-Rank Adaptation) for fine-tuning large language models?",
+    "category": "foundational",
+    "expected_sources": ["LoRA", "Low-Rank Adaptation"]
+  },
+  {
+    "id": "q4",
+    "query": "What is Chain-of-Thought prompting and how does it improve LLM reasoning?",
+    "category": "foundational",
+    "expected_sources": ["Chain-of-Thought"]
+  },
+  {
+    "id": "q5",
+    "query": "What is Reinforcement Learning from Human Feedback (RLHF) used for in language models?",
+    "category": "foundational",
+    "expected_sources": ["Reinforcement Learning", "Human Feedback"]
+  },
+  {
+    "id": "q6",
+    "query": "What is the BERT model and how is it pretrained?",
+    "category": "foundational",
+    "expected_sources": ["BERT"]
+  },
+  {
+    "id": "q7",
+    "query": "What are diffusion models and how do they generate images?",
+    "category": "foundational",
+    "expected_sources": ["Diffusion", "Denoising"]
+  },
+  {
+    "id": "q8",
+    "query": "What is contrastive learning and how does CLIP use it to connect images and text?",
+    "category": "foundational",
+    "expected_sources": ["CLIP", "Contrastive"]
+  },
+  {
+    "id": "q9",
+    "query": "What is Proximal Policy Optimization (PPO) in reinforcement learning?",
+    "category": "foundational",
+    "expected_sources": ["Proximal Policy Optimization"]
+  },
+  {
+    "id": "q10",
+    "query": "What is knowledge distillation and how does DistilBERT compress BERT?",
+    "category": "foundational",
+    "expected_sources": ["DistilBERT", "Distillation"]
+  }
+]
